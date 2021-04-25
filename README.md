@@ -12,7 +12,8 @@ Pensando em diferencia-la fiz questão de deixar-la totalmente responsiva e com 
 
 Alguns dos meus maiores aprendizados ao desenvolver esta aplicação foram os conceitos e tecnologias embutidas no Next.js, tais como, SSR (Server side rendering) e SSG (Static site generation) para uma melhor indexação e experiência.
 
-A explicação desses conceitos são bem simples, o SSR gera todo o HTML, CSS e Javascript pelo servidor do Next (Node.js) e então entrega tudo de uma vez para o cliente com a interface montada. Diferente de aplicações desenvolvidas somente em ReactJS que a interface é montada totalmente com o Javascript no momento em que o site é aberto, o Next entrega esse benefício que ajuda na indexação do conteúdo.
+A explicação do SSR é bem simples, ele gera para nos todo o HTML, CSS e Javascript pelo servidor do Next (Node.js) e então entrega tudo de uma vez para o cliente com a interface montada. Diferente de aplicações desenvolvidas somente em ReactJS que a interface é montada totalmente com o Javascript no momento em que o site é aberto, o Next entrega esse benefício que ajuda na indexação do conteúdo.
+
 No entanto o SSG nos dá um controle para que possamos gerar todas as páginas estáticas no momento da Build do projeto, ou então podemos fazer com que as páginas sejam geradas assim que o usuário acesse a mesma. Pode-se entender que a geração da página seja como um Cache no qual é feita apenas uma requisição para buscar os conteúdos (Caso haja conteúdo para buscar) e depois apenas é fornecida a interface pronta. Importante lembrar também que é totalmente configurável o intervalo de geração das páginas.
 
 
@@ -26,11 +27,7 @@ No entanto o SSG nos dá um controle para que possamos gerar todas as páginas e
 
 ## Layout Mobile
 
-### Light
-![Mobile_Light](https://user-images.githubusercontent.com/71713087/116012045-8d8c7200-a5fe-11eb-8e10-38e6f0dc7cdd.png)
-
-### Dark
-![Mobile_Dark](https://user-images.githubusercontent.com/71713087/116012187-77cb7c80-a5ff-11eb-85db-0884cc1857e9.png)
+![Mobile_Light](https://user-images.githubusercontent.com/71713087/116012045-8d8c7200-a5fe-11eb-8e10-38e6f0dc7cdd.png)  ![Mobile_Dark](https://user-images.githubusercontent.com/71713087/116012187-77cb7c80-a5ff-11eb-85db-0884cc1857e9.png)
 
 
 # Tecnologias utilizadas
