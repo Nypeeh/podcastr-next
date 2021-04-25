@@ -33,7 +33,7 @@ const AllEpisodesCards: React.FC<AllEpisodesCardsProps> = ({
       <h2>Todos episódios</h2>
 
       <ul>
-        {latestEpisodes.map((episode, index) => (
+        {allEpisodes.map((episode, index) => (
           <li key={episode.id}>
             <Image
               width={192}

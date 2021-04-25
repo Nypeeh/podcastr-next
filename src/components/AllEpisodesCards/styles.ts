@@ -2,15 +2,15 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: none;
-  margin-bottom: 2rem;
+  padding-bottom: 12rem;
 
   ul {
     list-style: none;
 
     li {
       width: 100%;
-      background: var(--white);
-      border: 1px solid var(--gray-100);
+      background: ${({ theme }) => theme.colors.background};
+      border: 1px solid ${({ theme }) => theme.colors.border};
       padding: 1.25rem;
       border-radius: 1.5rem;
       position: relative;
@@ -35,7 +35,7 @@ export const Container = styled.div`
         width: 2.5rem;
         height: 2.5rem;
         background: var(--white);
-        border: 1px solid var(--gray-100);
+        border: 1px solid ${({ theme }) => theme.colors.border};
         border-radius: 0.675rem;
         font-size: 0;
         transition: filter 0.2s;
@@ -55,6 +55,27 @@ export const Container = styled.div`
   @media (max-width: 1000px) {
     display: block;
   }
+
+  @media (max-width: 540px) {
+    ul li {
+      flex-direction: column;
+      justify-content: center;
+
+      button {
+        margin-top: 1.5rem;
+        position: static;
+        width: 95%;
+        max-width: 100px;
+        height: 55px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+  }
 `
 
 export const EpisodeDetails = styled.div`
@@ -63,7 +84,7 @@ export const EpisodeDetails = styled.div`
 
   a {
     display: block;
-    color: var(--gray-800);
+    color: ${({ theme }) => theme.colors.text};
     font-family: Lexend, sans-serif;
     font-weight: 600;
     text-decoration: none;
@@ -104,6 +125,19 @@ export const EpisodeDetails = styled.div`
         top: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  @media (max-width: 540px) {
+    a {
+      margin: 1rem 0;
+    }
+
+    p {
+      max-width: 100%;
+      white-space: initial;
+      overflow: initial;
+      text-overflow: initial;
     }
   }
 `

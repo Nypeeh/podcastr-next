@@ -9,7 +9,7 @@ export const Container = styled.div`
     th,
     td {
       padding: 0.75rem 1rem;
-      border-bottom: 1px solid var(--gray-100);
+      border-bottom: 1px solid ${({ theme }) => theme.colors.border};
     }
 
     th {
@@ -29,7 +29,7 @@ export const Container = styled.div`
       }
 
       a {
-        color: var(--gray-800);
+        color: ${({ theme }) => theme.colors.title};
         font-family: Lexend, sans-serif;
         font-weight: 600;
         text-decoration: none;
@@ -44,8 +44,8 @@ export const Container = styled.div`
       button {
         width: 2rem;
         height: 2rem;
-        background: var(--white);
-        border: 1px solid var(--gray-100);
+        background: ${({ theme }) => theme.colors.background};
+        border: 1px solid ${({ theme }) => theme.colors.border};
         border-radius: 0.5rem;
         font-size: 0;
         transition: filter 0.2s;
@@ -60,6 +60,10 @@ export const Container = styled.div`
         }
       }
     }
+  }
+
+  @media (max-width: 1440px) {
+    padding-bottom: 12rem;
   }
 
   @media (max-width: 1000px) {

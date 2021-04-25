@@ -16,14 +16,14 @@ export const Container = styled.div`
 
 export const LatestEpisodes = styled.section`
   ul {
-    list-style: none;
     display: flex;
     justify-content: space-between;
+    list-style: none;
 
     li {
       width: 100%;
-      background: var(--white);
-      border: 1px solid var(--gray-100);
+      background: ${({ theme }) => theme.colors.background};
+      border: 1px solid ${({ theme }) => theme.colors.border};
       padding: 1.25rem;
       border-radius: 1.5rem;
       position: relative;
@@ -47,8 +47,8 @@ export const LatestEpisodes = styled.section`
         bottom: 2rem;
         width: 2.5rem;
         height: 2.5rem;
-        background: var(--white);
-        border: 1px solid var(--gray-100);
+        background: ${({ theme }) => theme.colors.background};
+        border: 1px solid ${({ theme }) => theme.colors.border};
         border-radius: 0.675rem;
         font-size: 0;
         transition: filter 0.2s;
@@ -67,10 +67,7 @@ export const LatestEpisodes = styled.section`
 
   @media (max-width: 1000px) {
     ul {
-      margin: 0 auto;
       flex-direction: column;
-      align-items: center;
-      max-width: 700px;
 
       li {
         & + li {
@@ -81,10 +78,23 @@ export const LatestEpisodes = styled.section`
     }
   }
 
-  @media (max-width: 560px) {
-    ul {
-      li div div > img {
-        display: none !important;
+  @media (max-width: 540px) {
+    ul li {
+      flex-direction: column;
+      justify-content: center;
+
+      button {
+        margin-top: 1.5rem;
+        position: static;
+        width: 95%;
+        max-width: 100px;
+        height: 55px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
       }
     }
   }
@@ -96,7 +106,7 @@ export const EpisodeDetails = styled.div`
 
   a {
     display: block;
-    color: var(--gray-800);
+    color: ${({ theme }) => theme.colors.title};
     font-family: Lexend, sans-serif;
     font-weight: 600;
     text-decoration: none;
@@ -110,7 +120,7 @@ export const EpisodeDetails = styled.div`
   p {
     font-size: 0.875rem;
     margin-top: 0.5rem;
-    max-width: 70%;
+    max-width: 80%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -137,6 +147,19 @@ export const EpisodeDetails = styled.div`
         top: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  @media (max-width: 540px) {
+    a {
+      margin: 1rem 0;
+    }
+
+    p {
+      max-width: 100%;
+      white-space: initial;
+      overflow: initial;
+      text-overflow: initial;
     }
   }
 `

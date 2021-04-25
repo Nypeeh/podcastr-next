@@ -6,7 +6,7 @@ export const Container = styled.div`
   left: 0;
   width: 100%;
 
-  background: var(--purple-500);
+  background: ${({ theme }) => theme.colors.backgroundPlayer};
   color: var(--white);
 
   justify-content: center;
@@ -24,9 +24,9 @@ export const Container = styled.div`
   }
 
   footer {
+    display: flex;
     padding: 1rem 0;
     flex: 1;
-    align-self: stretch;
 
     &.empty div:nth-of-type(1) {
       opacity: 0.5;
@@ -37,6 +37,70 @@ export const Container = styled.div`
     display: flex;
   }
 `
+
+export const EpisodeInfo = styled.div`
+  display: flex;
+  align-items: center;
+  max-width: 20%;
+  margin-left: 0.5rem;
+
+  img {
+    border-radius: 0.8rem;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+  }
+
+  p {
+    flex: 1;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`
+
+export const PlayerControls = styled.div`
+  z-index: 5;
+  background-color: ${({ theme }) => theme.colors.backgroundPlayer};
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+export const EpisodeMembers = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 0.2;
+
+  p:nth-of-type(1) {
+    font-size: 0.8rem;
+    animation: transitionToLeft 10s ease-in infinite;
+    animation-delay: 2s;
+  }
+
+  @keyframes transitionToLeft {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`
+
 export const CurrentEpisode = styled.div`
   text-align: center;
 
@@ -83,7 +147,7 @@ export const Progress = styled.div`
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  width: 95%;
+  width: 70%;
   margin: 0 auto;
 
   span {

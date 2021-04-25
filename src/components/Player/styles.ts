@@ -1,12 +1,13 @@
 import styled from 'styled-components'
+import { shade } from 'polished'
 
 export const Container = styled.div`
   padding: 3rem 4rem;
   width: 26.5rem;
   height: 100vh;
 
-  background: var(--purple-500);
-  color: var(--white);
+  background: ${({ theme }) => theme.colors.backgroundPlayer};
+  color: ${({ theme }) => theme.colors.secundary};
 
   display: flex;
   flex-direction: column;
@@ -61,11 +62,15 @@ export const CurrentEpisode = styled.div`
 export const EmptyPlayer = styled.div`
   width: 100%;
   height: 20rem;
-  border: 2.5px dashed var(--purple-300);
+  border: 2.5px dashed ${({ theme }) => theme.colors.borderEmptyPlayer};
   border-radius: 1.5rem;
   background: linear-gradient(
     143.8deg,
-    rgba(145, 100, 250, 0.8) 0%,
+    ${({ theme }) =>
+        theme.title === 'dark'
+          ? 'rgba(145, 100, 250, 0.4)'
+          : 'rgba(145, 100, 250, 0.8)'}
+      0%,
     rgba(0, 0, 0, 0) 100%
   );
 
@@ -97,7 +102,7 @@ export const Slider = styled.div`
 export const EmptySlider = styled.div`
   width: 100%;
   height: 4px;
-  background: var(--purple-300);
+  background: ${({ theme }) => theme.colors.primary};
   border-radius: 2px;
 `
 
@@ -135,7 +140,7 @@ export const Buttons = styled.div`
       width: 4rem;
       height: 4rem;
       border-radius: 1rem;
-      background: var(--purple-400);
+      background: ${({ theme }) => shade(0.1, theme.colors.primary)};
 
       :hover:not(:disabled) {
         filter: brightness(0.95);

@@ -3,11 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.div`
   max-width: 45rem;
   padding: 3rem 2rem;
+  padding-bottom: 12rem;
   margin: 0 auto;
 
   header {
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--gray-100);
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
     h1 {
       margin-top: 2rem;
@@ -79,7 +80,7 @@ export const ThumbnailContainer = styled.div`
 export const Description = styled.div`
   margin-top: 2rem;
   line-height: 1.675rem;
-  color: var(--gray-800);
+  color: ${({ theme }) => theme.colors.title};
 
   p {
     margin: 1.5rem 0;

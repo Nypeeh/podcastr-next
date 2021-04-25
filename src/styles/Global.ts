@@ -28,17 +28,18 @@ export default createGlobalStyle`
   @media (max-width: 1080px) { html { font-size: 93.75%; } }
   @media (max-width: 720px) { html { font-size: 87.5%; } }
 
-  body { background-color: var(--gray-50); overflow: hidden; }
+  body { background-color: ${({ theme }) =>
+    theme.colors.background}; overflow: hidden; }
 
   body, input, textarea, button {
     font: 500 1rem Inter, sans-serif;
-    color: var(--gray-500);
+    color: ${({ theme }) => theme.colors.text};
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     font-family: Lexend, sans-serif;
-    color: var(--gray-800);
+    color: ${({ theme }) => theme.colors.title};
   }
 
   h1 { font-size: 2rem; }

@@ -29,6 +29,8 @@
     "space-before-function-paren": "off",
     "react/prop-types": "off",
     "camelcase": "off",
-    "multiline-ternary": "off"
+    "multiline-ternary": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "indent": "off"
   }
 }
