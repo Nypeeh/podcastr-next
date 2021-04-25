@@ -1,6 +1,6 @@
 # Podcastr
 
-# Sobre o projeto
+## Sobre o projeto
 
 Podcastr é uma aplicação Front-end e mobile construída durante a 5ª edição da NextLevelWeek (#nlw5), evento organizado pela [Rocketseat](https://nextlevelweek.com/ "Site da NextLevelWeek").
 
@@ -17,9 +17,20 @@ No entanto o SSG nos dá um controle para que possamos gerar todas as páginas e
 
 
 ## Layout Web
+### Dark
+![Web_Dark](https://user-images.githubusercontent.com/71713087/116012204-8dd93d00-a5ff-11eb-8ef4-ce3fe43a2ffa.png)
+
+### Light
+![Web_Light](https://user-images.githubusercontent.com/71713087/116012017-65047800-a5fe-11eb-80a6-0d4fb12f06d1.png)
 
 
 ## Layout Mobile
+
+### Light
+![Mobile_Light](https://user-images.githubusercontent.com/71713087/116012045-8d8c7200-a5fe-11eb-8e10-38e6f0dc7cdd.png)
+
+### Dark
+![Mobile_Dark](https://user-images.githubusercontent.com/71713087/116012187-77cb7c80-a5ff-11eb-85db-0884cc1857e9.png)
 
 
 # Tecnologias utilizadas
