@@ -13,6 +13,7 @@ declare module 'styled-components' {
       background: string
       backgroundCards: string
       backgroundPlayer: string
+      backgroundButton: string
 
       border: string
       title: string

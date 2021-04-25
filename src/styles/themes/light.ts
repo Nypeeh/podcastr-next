@@ -13,6 +13,7 @@ export default {
     background: '#f7f8fa',
     backgroundCards: '#fff',
     backgroundPlayer: '#8257e5',
+    backgroundButton: '#f7f8fa',
 
     title: '#494d4b',
     text: '#808080'

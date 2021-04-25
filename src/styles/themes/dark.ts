@@ -13,6 +13,7 @@ export default {
     background: '#242038',
     backgroundCards: shade(-0.2, '#242038'),
     backgroundPlayer: shade(0.35, '#8257e5'),
+    backgroundButton: shade(-0.2, '#242038'),
 
     title: '#a58ae3',
     text: shade(0.2, '#a58ae3')

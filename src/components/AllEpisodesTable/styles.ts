@@ -44,7 +44,7 @@ export const Container = styled.div`
       button {
         width: 2rem;
         height: 2rem;
-        background: ${({ theme }) => theme.colors.background};
+        background: ${({ theme }) => theme.colors.backgroundButton};
         border: 1px solid ${({ theme }) => theme.colors.border};
         border-radius: 0.5rem;
         font-size: 0;

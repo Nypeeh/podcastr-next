@@ -34,7 +34,7 @@ export const Container = styled.div`
         bottom: 2rem;
         width: 2.5rem;
         height: 2.5rem;
-        background: var(--white);
+        background: ${({ theme }) => theme.colors.backgroundButton};
         border: 1px solid ${({ theme }) => theme.colors.border};
         border-radius: 0.675rem;
         font-size: 0;

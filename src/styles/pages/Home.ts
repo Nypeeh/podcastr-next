@@ -47,7 +47,7 @@ export const LatestEpisodes = styled.section`
         bottom: 2rem;
         width: 2.5rem;
         height: 2.5rem;
-        background: ${({ theme }) => theme.colors.background};
+        background: ${({ theme }) => theme.colors.backgroundButton};
         border: 1px solid ${({ theme }) => theme.colors.border};
         border-radius: 0.675rem;
         font-size: 0;
